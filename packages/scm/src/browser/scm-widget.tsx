@@ -36,11 +36,11 @@ export class ScmWidget extends BaseWidget implements StatefulWidget {
 
     static ID = 'scm-view';
 
-    @inject(ScmService) protected readonly scmService: ScmService;
+    @inject(ScmService) readonly scmService: ScmService;
     @inject(ScmCommitWidget) protected readonly commitWidget: ScmCommitWidget;
-    @inject(ScmTreeWidget) protected readonly resourceWidget: ScmTreeWidget;
+    @inject(ScmTreeWidget) readonly resourceWidget: ScmTreeWidget;
     @inject(ScmAmendWidget) protected readonly amendWidget: ScmAmendWidget;
-    @inject(ScmNoRepositoryWidget) protected readonly noRepositoryWidget: ScmNoRepositoryWidget;
+    @inject(ScmNoRepositoryWidget) readonly noRepositoryWidget: ScmNoRepositoryWidget;
     @inject(ScmPreferences) protected readonly scmPreferences: ScmPreferences;
 
     set viewMode(mode: 'tree' | 'list') {
